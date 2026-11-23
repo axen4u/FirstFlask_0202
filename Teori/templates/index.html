@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Flask - Parsing Parameter POST</title>
+    <!-- Menghubungkan file styles.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Form Input Data (POST)</h2>
+
+        <!-- Form dengan Method POST -->
+        <form method="POST">
+            <!-- Form Group 1: Label & TextField Nama -->
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda..." required>
+            </div>
+
+            <!-- Form Group 2: Label & TextField Pesan -->
+            <div class="form-group">
+                <label for="pesan">Pesan / Keterangan:</label>
+                <input type="text" id="pesan" name="pesan" placeholder="Masukkan pesan Anda..." required>
+            </div>
+
+            <!-- Button Submit -->
+            <button type="submit" class="btn">Kirim Data (POST)</button>
+        </form>
+
+        <!-- Menampilkan Hasil Parsing Parameter POST -->
+        {% if hasil %}
+        <div class="result-card">
+            <h3>Hasil Parsing Data POST:</h3>
+            <div class="result-item"><strong>Nama:</strong> {{ hasil.nama }}</div>
+            <div class="result-item"><strong>Pesan:</strong> {{ hasil.pesan }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+

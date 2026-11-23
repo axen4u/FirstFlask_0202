@@ -1,0 +1,18 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary office files
+~$*.pptx
+~$*.docx
+
+# OS generated files
+.DS_Store
+Thumbs.db
